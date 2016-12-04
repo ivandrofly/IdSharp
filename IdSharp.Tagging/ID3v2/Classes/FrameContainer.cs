@@ -173,7 +173,7 @@ namespace IdSharp.Tagging.ID3v2
                 IComments comment = m_CommentsList[i];
                 if (comment.Description?.StartsWith("iTun", StringComparison.Ordinal) == true)
                 {
-                    m_CommentsList.Remove(comment);
+                    m_CommentsList.RemoveAt(i);
                     m_iTunesCommentsList.Insert(iTunesCommentsInsertIndex, comment);
                 }
             }
